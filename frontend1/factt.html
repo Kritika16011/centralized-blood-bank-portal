@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centralized Blood Bank</title>
+    <style>
+         /* Global styles*/
+         body { 
+                font-family: 'Open Sans', sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f9f9f9;
+                }
+               .header {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center; /* Centers the heading horizontally */
+                  position: relative; /* Allows positioning of the logo */
+                  height: 80px;
+                  background-color: #e74c3c;
+                  color: white;
+                  padding: 0 20px;
+                  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+               }
+
+               .logo {
+                    position: absolute; /* Positions the logo independently */
+                    left: 20px; /* Aligns the logo to the leftmost corner */
+                  }
+
+               .logo img {
+                     height: 50px; /* Adjusts the logo size */
+                 }
+
+               .heading {
+                     margin: 0;
+                     font-size: 30px;
+                     font-weight: bold;
+                  }
+                
+             /* Navigation styles */
+             nav ul {
+               display: flex;
+               list-style: none;
+               gap: 15px;
+               margin: 0;
+               padding: 0;       }           
+
+              nav ul li a {
+                 text-decoration: none;
+                 color: #333;
+                font-weight: bold;
+               }
+                
+               /* Navigation section*/
+               * {
+                  padding: 0;
+                  margin: 0;
+                  font-family:'Poppins', sans-serif;
+                }
+                ul {
+                  list-style:none;
+                  background:#333;
+                }
+                ul li {
+                  display: inline-block;
+                  position: relative;
+                }
+                ul li a {
+                  display: block;
+                  padding: 10px 10px;
+                  color:#FFF;
+                  text-decoration: none;
+                  text-align: center;
+                  font-size: 20px;
+               }
+               ul li ul.dropdown li {
+                  display: block;
+               }
+               ul li ul.dropdown  {
+                  width: 100%;
+                  background: #808080;
+                  position: absolute;
+                  z-index: 999;
+                  display: none;
+               }
+               ul li a:hover {
+                  background: #463f3f;
+               }
+               ul li:hover ul.dropdown {
+                  display: block;
+               }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            font-size: 20px;
+            background-image: url('https://media.istockphoto.com/id/1415405974/photo/blood-donor-at-donation-with-bouncy-ball-holding-in-hand.jpg?s=612x612&w=0&k=20&c=j0nkmkJxIP6U6TsI3yTq8iuc0Ufhq6xoW4FSMlKaG6A=');
+            height:"100%";
+            background-size: cover;
+            background-position: center;
+           
+        }
+        
+        header {
+            background-color: #e63946;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+        nav {
+            background-color: #6a4c93;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 20px;
+            
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            
+            
+
+        }
+        .content {
+            padding: 20px;
+            line-height: 1.6;
+            font-size: 20px;
+            
+            
+
+        }
+        .section {
+            margin-bottom: 40px;
+            font-size: 20px;
+            
+            
+
+        }
+        .section h2 {
+            color: #e63946;
+            font-size: 20px;
+            
+            
+        }
+        
+        
+        /* Footer */ 
+        footer { 
+                    background-color: #333; 
+                    color: white; 
+                    text-align: center; 
+                    padding: 20px 0; 
+                    } 
+                  .footer-nav u1{
+                       list-style-type:none;
+                       padding:0;
+                       margin:0;
+                       display:flex;
+                       justify-content:center;
+                       gap: 30px;
+                  }
+                  .footer-nav li {
+                     display: inline-block;
+                  }
+                  .footer-link {
+                     text-decoration: none;
+                     color: white;
+                     font-size: 16px;
+                     padding: 10px 20px;
+                     display:inline-block;
+                     border-radius: 5px;
+                     transition: background-color 0.3s ease;
+                  }
+                  .footer-link:hover {
+                     background-color: #007bff;
+                  }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <h1 class="heading">Central Blood Bank</h1>
+    </header>
+
+    <!--
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li>
+          <a href="#">About us</a>
+          <ul class="dropdown">
+               <li><a href="abouttt.html">About us</a></li>
+               <li><a href="factt.html">Facts</a></li>
+               <li><a href="gallery.html">Photo gallery</a></li> 
+               <li><a href ="videogallery.html">Video gallery</a></li>
+               <li><a href="Looking.html">Know Us</a></li> 
+               <li><a href="FAQS1.html">FAQs</a></li>
+               <li><a href="#contact">Contact</a></li>
+
+         </ul>
+       </li>
+       <li>
+          <a href="#">Looking for blood</a>
+          <ul class="dropdown">
+               <li><a href="BloodAvailability1.html">Blood Availability</a></li>
+               <li><a href="bloodbankdirectory.html">Blood Bank Directory</a></li> 
+               
+         </ul>
+       
+       </li>
+       <li><a href="donorlogin3.html">Donor Login</a></li>
+       <li><a href="#">Blood Bank Login</a>
+       <ul class="dropdown">
+          <li><a href="e raktportallogin.html">E-rakt Portal Login</a></li>
+          <li><a href="#">Add Your Blood Bank</a></li> 
+       </ul>
+        
+    </ul>
+-->
+<ul>
+    <li><a href="home.html">Home</a></li>
+    <li>
+      <a href="#">About us</a>
+      <ul class="dropdown">
+           <li><a href="abouttt.html">About us</a></li>
+           <li><a href="factt.html">Facts</a></li>
+           <li><a href="gallery.html">Photo gallery</a></li> 
+           <li><a href ="videogallery.html">Video gallery</a></li>
+           <li><a href="Looking.html">Know Us</a></li> 
+           <li><a href="FAQS1.html">FAQs</a></li>
+           
+
+     </ul>
+   </li>
+   <li>
+      <a href="#">Looking for blood</a>
+      <ul class="dropdown">
+           <li><a href="BloodAvailability1.html">Blood Availability</a></li>
+           <li><a href="bloodbankdirectory.html">Blood Bank Directory</a></li> 
+           <li><a href="donordetails.html">Search Donor</a></li> 
+           
+     </ul>
+   
+   </li>
+   <li>
+      <a href="#">Donor </a>
+      <ul class="dropdown">
+         <li><a href="register1.html">Donor register</a></li>
+         <li><a href="donorlogin1.html">Donor login</a></li> 
+         
+   </ul>
+ </li>
+   <li><a href="request1.html">Request Blood</a></li>
+   <li><a href="#">Blood Bank Login</a>
+   <ul class="dropdown">
+      <li><a href="bloodbanklogin.html">Blood Bank Login</a></li>
+      <li><a href="bloodbankregistration.html ">Add Your Blood Bank</a></li> 
+   </ul>
+    
+</ul>
+
+
+    
+    <nav>
+        <a href="#why-donate">Why Donate Blood</a>
+        <a href="#facts">Facts About Blood Donation</a>
+        <a href="#pre-screening">Pre-Donation Screening</a>
+        <a href="#post-donation">Post-Donation Tips</a>
+        <a href="#benefits">Benefits of Blood Donation</a>
+    </nav>
+    <div class="content">
+        <div id="why-donate" class="section">
+            <h2><center><mark>Why Donate Blood?</center></mark></h2>
+            <p>Every two seconds, someone needs blood. By donating blood, you can help save lives and contribute to a healthier community. Blood donation is a simple act that makes a significant impact.</p>
+        </div>
+
+        <div id="facts" class="section">
+            <h2><center><mark>Facts About Blood Donation</center></mark></h2>
+            <center>
+            
+                
+              <li>    One donation can save up to three lives.</li>
+                <li>  There is no substitute for human blood.</li>
+                <li>  Healthy donors can donate blood every 56 days.</li>
+                <li>  O-negative blood is universal and can be used for any patient.</li>
+                
+            
+            </center>
+        </div>
+
+        <div id="pre-screening" class="section">
+            <h2><center><mark>Pre-Donation Screening</center></mark></h2>
+            <p><center>Before donating, donors undergo a quick health screening to ensure they are eligible to donate. This includes:</center></p>
+            <center>
+            
+                <li>  Checking blood pressure, pulse, and temperature.</li>
+                <li>  Hemoglobin level test to confirm you are not anemic.</li>
+                <li>  Medical questionnaire to identify potential risks.</li>
+            
+            </center>
+        </div>
+
+        <div id="post-donation" class="section">
+            <h2><center><mark>Post-Donation Tips</center></mark></h2>
+            <p> <center>After donating blood, follow these tips to ensure a smooth recovery:</center></p>
+            <center>
+            
+                <li>    Stay hydrated and drink plenty of fluids.</li>
+                <li>    Avoid heavy lifting or strenuous activity for 24 hours.</li>
+                <li>    Have a healthy snack to restore your energy levels.</li>
+                <li>    Report any dizziness or discomfort to staff immediately.</li>
+            
+            </center>
+        </div>
+
+        <div id="benefits" class="section">
+            <h2> <center><mark>Benefits of Blood Donation</center></mark></h2>
+            <div class="benefits">
+                <center>
+                
+                    <li>  Helps save lives in emergencies and surgeries.</li>
+                    <li>  Stimulates the production of new blood cells.</li>
+                    <li>  Improves heart health by reducing excess iron levels.</li>
+                    <li>  Provides a sense of community and purpose.</li>
+                
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <nav class="footer-nav">
+            <ul>
+               <li><a href="home.html" class="footer-link">Home</a></li>
+               <li><a href="abouttt.html" class="footer-link">About us</a></li>
+               <li><a href="gallery.html" class="footer-link">Photo gallery</a></li>
+               <li><a href="videogallery.html" class="footer-link">Video gallery</a></li>
+               <li><a href="BloodAvailability1.html" class="footer-link">Blood Availability</a></li>
+               <li><a href="bloodbankdirectory.html" class="footer-link">Blood Bank Directory</a></li>
+               <li><a href="donorlogin3.html" class="footer-link">Donor Login</a></li>
+               <li><a href="e raktportallogin.html" class="footer-link">e raktportallogin</a></li>
+               
+            </ul>
+            <hr>
+            <p>&copy; 2025 Central Blood Bank | All Rights Reserved</p> 
+         </nav>
+    </footer>
+</body>
+</html>

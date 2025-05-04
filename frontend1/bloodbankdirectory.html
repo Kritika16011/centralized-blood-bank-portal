@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nearest Blood Bank Search</title>
+  <link rel="stylesheet" href="Bloodbankdirectory.css">
+</head>
+<body background="bloodbankdirectory.jpg">
+  <header class="header">
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+    </div>
+    <h1 class="heading">Central Blood Bank</h1>
+  </header>
+<!--
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li>
+      <a href="#">About us</a>
+      <ul class="dropdown">
+        <li><a href="abouttt.html">About us</a></li>
+        <li><a href="factt.html">Facts</a></li>
+        <li><a href="gallery.html">Photo gallery</a></li> 
+        <li><a href="videogallery.html">Video gallery</a></li>
+        <li><a href="Looking.html">Know Us</a></li> 
+        <li><a href="FAQS1.html">FAQs</a></li>
+        
+      </ul>
+    </li>
+    <li>
+      <a href="#">Looking for blood</a>
+      <ul class="dropdown">
+        <li><a href="BloodAvailability1.html">Blood Availability</a></li>
+        <li><a href="bloodbankdirectory.html">Blood Bank Directory</a></li> 
+      </ul>
+    </li>
+    <li>
+      <a href="#">Donor Details</a>
+      <ul class="dropdown">
+         <li><a href="register1.html">Donor register</a></li>
+         <li><a href="donorlogin.html">Donor login</a></li> 
+         
+   </ul>
+   <li><a href="request.html">Request Blood</a></li>
+   <li><a href="#">Blood Bank Login</a>
+   <ul class="dropdown">
+      <li><a href="e raktportallogin.html">E-rakt Portal Login</a></li>
+      <li><a href="bloodbankregistration.html ">Add Your Blood Bank</a></li> 
+   </ul>
+    
+</ul>
+-->
+<ul>
+  <li><a href="home.html">Home</a></li>
+  <li>
+    <a href="#">About us</a>
+    <ul class="dropdown">
+         <li><a href="abouttt.html">About us</a></li>
+         <li><a href="factt.html">Facts</a></li>
+         <li><a href="gallery.html">Photo gallery</a></li> 
+         <li><a href ="videogallery.html">Video gallery</a></li>
+         <li><a href="Looking.html">Know Us</a></li> 
+         <li><a href="FAQS1.html">FAQs</a></li>
+         
+
+   </ul>
+ </li>
+ <li>
+    <a href="#">Looking for blood</a>
+    <ul class="dropdown">
+         <li><a href="BloodAvailability1.html">Blood Availability</a></li>
+         <li><a href="bloodbankdirectory.html">Blood Bank Directory</a></li> 
+         <li><a href="donordetails.html">Search Donor</a></li> 
+         
+   </ul>
+ 
+ </li>
+ <li>
+    <a href="#">Donor </a>
+    <ul class="dropdown">
+       <li><a href="register1.html">Donor register</a></li>
+       <li><a href="donorlogin1.html">Donor login</a></li> 
+       
+ </ul>
+</li>
+ <li><a href="request1.html">Request Blood</a></li>
+ <li><a href="#">Blood Bank Login</a>
+ <ul class="dropdown">
+    <li><a href="bloodbanklogin.html">Blood Bank Login</a></li>
+    <li><a href="bloodbankregistration.html ">Add Your Blood Bank</a></li> 
+ </ul>
+  
+</ul>
+
+  <div class="container">
+    <h1>Nearest Blood Bank (BB) / Blood Storage Unit (BSU)</h1>
+    <div class="search-section">
+      <div class="dropdowns">
+        <select id="state" class="dropdown" onchange="populateDistricts()">
+          <option value="">Select State</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option>
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="Rajasthan">Rajasthan</option>
+          <option value="Bihar">Bihar</option>
+          <option value="Karnataka">Karnataka</option>
+        </select>
+        <select id="district" class="dropdown">
+          <option value="">Select District</option>
+        </select>
+        <input type="text" id="name" placeholder="Blood Bank or Hospital Name" class="dropdown">
+        <button id="search-btn" class="btn">Search</button>
+      </div>
+      <div class="geolocation-warning" style="display: none;">
+        User denied the request for Geolocation.
+      </div>
+    </div>
+
+    <div class="legend">
+      <label>
+        <input type="checkbox" id="govtBloodBanks">
+        <span>Government Blood Banks</span>
+      </label>
+      <label>
+        <input type="checkbox" id="otherBloodBanks">
+        <span>Other Blood Banks</span>
+      </label>
+    </div>
+
+    <div class="result-section">
+      <div class="show-entries">
+        <label for="entries">Show 
+          <select id="entries">
+            <option value="4">4</option>
+            <option value="8">8</option>
+            <option value="12">12</option>
+          </select> 
+          entries
+        </label>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>S.No.</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Category</th>
+            <th>Component Facility</th>
+            <th>Apheresis Facility</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <tr>
+            <td colspan="8">No data available in table</td>
+          </tr>
+        </tbody>
+      </table>
+
+      
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Central Blood Bank | All Rights Reserved</p> 
+  </footer>
+
+  <script>
+    function populateDistricts() {
+      const stateDistricts = {
+        "Uttar Pradesh": ["Lucknow", "Varanasi", "Agra"],
+        "Maharashtra": ["Mumbai", "Pune", "Nagpur"],
+        "Rajasthan": ["Jaipur", "Udaipur", "Jodhpur"],
+        "Bihar": ["Patna", "Gaya", "Muzaffarpur"],
+        "Karnataka": ["Bangalore", "Mysore", "Hubli"]
+      };
+      
+      let state = document.getElementById("state").value;
+      let districtDropdown = document.getElementById("district");
+      districtDropdown.innerHTML = '<option value="">Select District</option>';
+      
+      if (stateDistricts[state]) {
+        stateDistricts[state].forEach(district => {
+          let option = document.createElement("option");
+          option.value = district;
+          option.textContent = district;
+          districtDropdown.appendChild(option);
+        });
+      }
+    }
+  </script>
+
+  <script src="directoryscript1.js"></script>
+</body>
+</html>

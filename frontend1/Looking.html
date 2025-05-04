@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-rakt Portal</title>
+    <style>
+         /* Global styles*/
+         body { 
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            }
+           .header {
+              display: flex;
+              align-items: center;
+              justify-content: center; /* Centers the heading horizontally */
+              position: relative; /* Allows positioning of the logo */
+              height: 80px;
+              background-color: #e74c3c;
+              color: white;
+              padding: 0 20px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+           }
+
+           .logo {
+                position: absolute; /* Positions the logo independently */
+                left: 20px; /* Aligns the logo to the leftmost corner */
+              }
+
+           .logo img {
+                 height: 50px; /* Adjusts the logo size */
+             }
+
+           .heading {
+                 margin: 0;
+                 font-size: 24px;
+                 font-weight: bold;
+              }
+              /* Navigation styles */
+             nav ul {
+               display: flex;
+               list-style: none;
+               gap: 15px;
+               margin: 0;
+               padding: 0;       }           
+
+              nav ul li a {
+                 text-decoration: none;
+                 color: #333;
+                font-weight: bold;
+               }
+                
+               /* Navigation section*/
+               * {
+                  padding: 0;
+                  margin: 0;
+                  font-family:'Poppins', sans-serif;
+                }
+                ul {
+                  list-style:none;
+                  background:#333;
+                }
+                ul li {
+                  display: inline-block;
+                  position: relative;
+                }
+                ul li a {
+                  display: block;
+                  padding: 10px 10px;
+                  color:#FFF;
+                  text-decoration: none;
+                  text-align: center;
+                  font-size: 20px;
+               }
+               ul li ul.dropdown li {
+                  display: block;
+               }
+               ul li ul.dropdown  {
+                  width: 100%;
+                  background: #808080;
+                  position: absolute;
+                  z-index: 999;
+                  display: none;
+               }
+               ul li a:hover {
+                  background: #463f3f;
+               }
+               ul li:hover ul.dropdown {
+                  display: block;
+               }
+            /* Footer */ 
+            footer { 
+                    background-color: #333; 
+                    color: white; 
+                    text-align: center; 
+                    padding: 20px 0; 
+                    } 
+                  .footer-nav u1{
+                       list-style-type:none;
+                       padding:0;
+                       margin:0;
+                       display:flex;
+                       justify-content:center;
+                       gap: 30px;
+                  }
+                  .footer-nav li {
+                     display: inline-block;
+                  }
+                  .footer-link {
+                     text-decoration: none;
+                     color: white;
+                     font-size: 16px;
+                     padding: 10px 20px;
+                     display:inline-block;
+                     border-radius: 5px;
+                     transition: background-color 0.3s ease;
+                  }
+                  .footer-link:hover {
+                     background-color: #007bff;
+                  }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff4d4d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 2.5em;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            background-color: white;
+        }
+        h2 {
+            color: #ff4d4d;
+            text-decoration: underline;
+        }
+        p {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+        .fact, .benefit, .pros {
+            margin-bottom: 20px;
+            background-color: #e6e6e6;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <h1 class="heading">Central Blood Bank</h1>
+    </header>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li>
+          <a href="#">About us</a>
+          <ul class="dropdown">
+               <li><a href="abouttt.html">About us</a></li>
+               <li><a href="factt.html">Facts</a></li>
+               <li><a href="gallery.html">Photo gallery</a></li> 
+               <li><a href ="videogallery.html">Video gallery</a></li>
+               <li><a href="Looking.html">Know Us</a></li> 
+               <li><a href="FAQS1.html">FAQs</a></li>
+         </ul>
+       </li>
+
+       <li>
+          <a href="#">Looking for blood</a>
+          <ul class="dropdown">
+               <li><a href="BloodAvailability1.html">Blood Availability</a></li>
+               <li><a href="bloodbankdirectory.html">Blood Bank Directory</a></li> 
+               <li><a href="donordetails.html">Search Donor</a></li>
+         </ul>
+       </li>
+
+       <li>
+        <a href="#">Donor </a>
+        <ul class="dropdown">
+           <li><a href="register1.html">Donor register</a></li>
+           <li><a href="donorlogin1.html">Donor login</a></li>    
+     </ul>
+   </li>
+
+     <li><a href="request1.html">Request Blood</a></li>
+     <li><a href="#">Blood Bank Login</a>
+     <ul class="dropdown">
+        <li><a href="bloodbanklogin.html">Blood Bank Login</a></li>
+        <li><a href="bloodbankregistration.html ">Add Your Blood Bank</a></li> 
+     </ul>
+    </ul>
+ 
+
+<section>
+    <div class="fact">
+        <h2>Facts about Centralized Blood Banks</h2>
+        <p>
+            <li>Centralized blood banks collect, store, and distribute blood from various donor centers.</li>
+            <li>They are managed by government or nonprofit organizations.</li>
+            <li>They ensure that blood is available for emergencies, surgeries, and treatments.</li>
+            <li>They help in tracking blood donations and usage efficiently.</li>
+        </p>
+    </div>
+
+    <div class="benefit">
+        <h2>Benefits of a Centralized Blood Bank</h2>
+        <p>
+            <li>Improved availability of blood for hospitals and clinics.</li>
+            <li>Standardized blood screening for safety.</li>
+            <li>Centralized management reduces duplication and wastage of resources.</li>
+            <li>Efficient allocation and transportation of blood supplies.</li>
+            <li>Better coordination between donors and medical needs.</li>
+        </p>
+    </div>
+
+    <div class="pros">
+        <h2>Pros of a Centralized Blood Bank</h2>
+        <p>
+            <li>Centralized tracking allows for better inventory control.</li>
+            <li>Reduces the risk of mismatched blood transfusions.</li>
+            <li>Promotes more regular and safe donations from donors.</li>
+            <li>Improved access to rare blood types through centralized networks.</li>
+            <li>Streamlined blood testing and quality assurance processes.</li>
+        </p>
+    </div>
+</section>
+
+<footer>
+    <nav class="footer-nav">
+        <p>
+           <li><a href="home.html" class="footer-link">Home</a></li>
+           <li><a href="abouttt.html" class="footer-link">About us</a></li>
+           <li><a href="gallery.html" class="footer-link">Photo gallery</a></li>
+           <li><a href="videogallery.html" class="footer-link">Video gallery</a></li>
+           <li><a href="BloodAvailability1.html" class="footer-link">Blood Availability</a></li>
+           <li><a href="bloodbankdirectory.html" class="footer-link">Blood Bank Directory</a></li>
+           <li><a href="donorlogin3.html" class="footer-link">Donor Login</a></li>
+           <li><a href="e raktportallogin.html" class="footer-link">e raktportallogin</a></li>
+           
+        </p>
+        <hr>
+        <p>&copy; 2025 Central Blood Bank | All Rights Reserved</p> 
+     </nav>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Registration</title>
+    <script defer src="script.js"></script>
+    <style>
+           body {
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('img5.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    form {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+        /*
+        body { 
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            }
+            */
+        
+           .header {
+              display: flex;
+              align-items: center;
+              justify-content: center; /* Centers the heading horizontally */
+              position: relative; /* Allows positioning of the logo */
+              height: 80px;
+              background-color: #e74c3c;
+              color: white;
+              padding: 0 20px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+           }
+
+           .logo {
+                position: absolute; /* Positions the logo independently */
+                left: 20px; /* Aligns the logo to the leftmost corner */
+              }
+
+           .logo img {
+                 height: 50px; /* Adjusts the logo size */
+             }
+
+           .heading {
+                 margin: 0;
+                 font-size: 24px;
+                 font-weight: bold;
+              }
+              
+              /* Navigation styles */
+             nav ul {
+               display: flex;
+               list-style: none;
+               gap: 15px;
+               margin: 0;
+               padding: 0;       }           
+
+              nav ul li a {
+                 text-decoration: none;
+                 color: #333;
+                font-weight: bold;
+               }
+                
+               /* Navigation section*/
+               * {
+                  padding: 0;
+                  margin: 0;
+                  font-family:'Poppins', sans-serif;
+                }
+                ul {
+                  list-style:none;
+                  background:#333;
+                }
+                ul li {
+                  display: inline-block;
+                  position: relative;
+                }
+                ul li a {
+                  display: block;
+                  padding: 10px 10px;
+                  color:#FFF;
+                  text-decoration: none;
+                  text-align: center;
+                  font-size: 20px;
+               }
+               ul li ul.dropdown li {
+                  display: block;
+               }
+               ul li ul.dropdown  {
+                  width: 100%;
+                  background: #808080;
+                  position: absolute;
+                  z-index: 999;
+                  display: none;
+               }
+               ul li a:hover {
+                  background: #463f3f;
+               }
+               ul li:hover ul.dropdown {
+                  display: block;
+               }
+
+        h2 {
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            color:azure;
+        }
+        /*
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+            */
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body background="img5.jpg">
+
+
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        
+        <h1 class="heading">Central Blood Bank</h1>
+    </header>
+       
+       <ul>
+         <li><a href="home.html">Home</a></li>
+         <li>
+           <a href="#">About us</a>
+           <ul class="dropdown">
+                <li><a href="abouttt.html">About us</a></li>
+                <li><a href="factt.html">Facts</a></li>
+                <li><a href="gallery.html">Photo gallery</a></li> 
+                <li><a href ="videogallery.html">Video gallery</a></li>
+                <li><a href="Looking.html">Know Us</a></li> 
+                <li><a href="FAQS1.html">FAQs</a></li>
+          </ul>
+        </li>
+        <li>
+           <a href="#">Looking for blood</a>
+           <ul class="dropdown">
+                <li><a href="BloodAvailability1.html">Blood Availability</a></li>
+                <li><a href="bloodbankdirectory.html">Blood Bank Directory</a></li> 
+                <li><a href="donordetails.html">Search Donor</a></li> 
+          </ul>
+        
+        </li>
+        <li>
+           <a href="#">Donor</a>
+           <ul class="dropdown">
+              <li><a href="register1.html">Donor register</a></li>
+              <li><a href="donorlogin1.html">Donor login</a></li> 
+              
+        </ul>
+      </li>
+        <li><a href="request1.html">Request Blood</a></li>
+        <li><a href="#">Blood Bank Login</a>
+        <ul class="dropdown">
+           <li><a href="bloodbanklogin.html">Blood Bank Login</a></li>
+           <li><a href="bloodbankregistration.html ">Add Your Blood Bank</a></li> 
+        </ul>
+         
+     </ul>
+    <h2>Blood Bank Registration</h2>
+
+    <div class="main-container">
+    
+    <form id="bloodBankForm">
+        <label>State:</label>
+        <select id="state" required>
+            <option value="">Select State</option>
+        </select>
+
+        <label>District:</label>
+        <select id="district" required>
+            <option value="">Select District</option>
+        </select>
+
+        <label>City:</label> <input type="text" id="city" required>
+        <label>Postal Address:</label> <input type="text" id="postal_address" required>
+        <label>Blood Bank Name:</label> <input type="text" id="blood_bank_name" required>
+        <label>Parent Hospital Name:</label> <input type="text" id="parent_hospital_name" required>
+        <label>Category:</label> <input type="text" id="category" required>
+        <label>Contact Person:</label> <input type="text" id="contact_person" required>
+        <label>Email:</label> <input type="email" id="email" required>
+        <label>Contact No:</label> <input type="tel" id="contact_no" required>
+        <label>First Registration Date:</label> <input type="date" id="first_registration_date" required>
+        <label>Licence No:</label> <input type="text" id="licence_no" required>
+
+        <label>Component Facility:</label>
+        <select id="component_facility" required>
+            <option value="">Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label>Apheresis Facility:</label>
+        <select id="apheresis_facility" required>
+            <option value="">Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label>Helpline No:</label> <input type="text" id="helpline_no" required>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<footer style="background-color: #333; color: #fff; text-align: center; padding: 10px;">
+    <p>&copy; 2025 Blood Bank Management. All rights reserved.</p>
+  </footer>
+
+    <script>
+        document.getElementById("bloodBankForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+             // Get values from form fields
+        const city = document.getElementById("city").value.trim();
+        const bloodBankName = document.getElementById("blood_bank_name").value.trim();
+        const parentHospitalName = document.getElementById("parent_hospital_name").value.trim();
+        const contactPerson = document.getElementById("contact_person").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const contactNo = document.getElementById("contact_no").value.trim();
+        const licenceNo = document.getElementById("licence_no").value.trim();
+        //const helplineNo = document.getElementById("helpline_no").value.trim();
+
+        // Regex patterns
+        const nameRegex = /^[A-Za-z\s]+$/;  // Only alphabets & spaces
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email format
+        const mobileRegex = /^[6-9]\d{9}$/; // Indian mobile number (10 digits, starts with 6-9)
+        const licenceRegex = /^[A-Z]{2}-\d{5}$/; // Format: "XX-12345"
+       // const helplineRegex = /^\d{10}$/; // 10-digit helpline number
+
+        // Validation checks
+        if (!nameRegex.test(city)) {
+            alert("City name should only contain alphabets.");
+            return;
+        }
+        if (!nameRegex.test(bloodBankName)) {
+            alert("Blood Bank Name should only contain alphabets.");
+            return;
+        }
+        if (!nameRegex.test(parentHospitalName)) {
+            alert("Parent Hospital Name should only contain alphabets.");
+            return;
+        }
+        if (!nameRegex.test(contactPerson)) {
+            alert("Contact Person name should only contain alphabets.");
+            return;
+        }
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+        if (!mobileRegex.test(contactNo)) {
+            alert("Please enter a valid 10-digit mobile number.");
+            return;
+        }
+        if (!licenceRegex.test(licenceNo)) {
+            alert("Licence No should be in 'XX-12345' format.");
+            return;
+        }
+        /*if (!helplineRegex.test(helplineNo)) {
+            alert("Helpline number should be a 10-digit number.");
+            return;
+        }*/
+
+            const formData = {
+                state: document.getElementById("state").value,
+                district: document.getElementById("district").value,
+                city: document.getElementById("city").value,
+                postal_address: document.getElementById("postal_address").value,
+                blood_bank_name: document.getElementById("blood_bank_name").value,
+                parent_hospital_name: document.getElementById("parent_hospital_name").value,
+                category: document.getElementById("category").value,
+                contact_person: document.getElementById("contact_person").value,
+                email: document.getElementById("email").value,
+                contact_no: document.getElementById("contact_no").value,
+                first_registration_date: document.getElementById("first_registration_date").value,
+                licence_no: document.getElementById("licence_no").value,
+                component_facility: document.getElementById("component_facility").value,
+                apheresis_facility: document.getElementById("apheresis_facility").value,
+                helpline_no: document.getElementById("helpline_no").value
+            };
+
+            fetch("http://localhost:5000/bloodbank/add", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert("Form submitted successfully!");
+                console.log(data);
+                window.location.href = "bloodbanklogin.html";
+            })
+            .catch(error => {
+                alert("Error submitting form.");
+                console.error("Error:", error);
+            });
+        });
+    </script>
+</body>
+</html>

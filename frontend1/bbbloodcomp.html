@@ -1,0 +1,46 @@
+<form id="updateForm">
+    <select id="bloodType">
+      <option value="A+">A+</option>
+      <option value="B+">B+</option>
+      <option value="O+">O+</option>
+      <option value="AB+">AB+</option>
+      <option value="A-">A-</option>
+      <option value="B-">B-</option>
+      <option value="O-">O-</option>
+      <option value="AB-">AB-</option>
+    </select>
+  
+    <input id="plasma" placeholder="Plasma Units Available" />
+    <input id="platelets" placeholder="Platelets Units Available" />
+    <input id="wbc" placeholder="White Blood Cells (WBC) Units" />
+    <input id="rbc" placeholder="Red Blood Cells (RBC) Units" />
+  
+    <button type="submit">Update Availability</button>
+  </form>
+  <script>
+  document.getElementById("updateForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+  
+    const data = {
+      bloodType: document.getElementById("bloodType").value,
+      plasma: document.getElementById("plasma").value,
+      platelets: document.getElementById("platelets").value,
+      wbc: document.getElementById("wbc").value,
+      rbc: document.getElementById("rbc").value,
+    };
+  
+    fetch("/api/update", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then(res => res.json())
+      .then(msg => {
+        alert("Update successful!");
+      })
+      .catch(err => console.error("Update failed", err));
+  });
+  </script>
+    

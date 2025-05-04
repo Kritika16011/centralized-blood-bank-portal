@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Blood Bank</title>
+    <style>
+        /* General page styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #b22222;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            background-color: #8b0000;
+            padding: 10px 0;
+            justify-content: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: #d32f2f;
+        }
+
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #8b0000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+            animation: slide-down 0.3s ease-out;
+        }
+
+        /* Slide-down animation */
+        @keyframes slide-down {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Main content section */
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content h2 {
+            color: #8b0000;
+        }
+
+        .content p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin-top: 20px;
+            border: 2px solid #d32f2f;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Central Blood Bank</h1>
+        <p>Saving lives, one drop at a time</p>
+    </header>
+
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <div class="dropdown">
+            <a href="#" class="dropbtn">Services</a>
+            <div class="dropdown-content">
+                <a href="#donate">Donate Blood</a>
+                <a href="#request">Request Blood</a>
+                <a href="#campaigns">Campaigns</a>
+            </div>
+        </div>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="content">
+        <h2>Welcome to the Central Blood Bank</h2>
+        <p>
+            Our mission is to ensure a safe and adequate blood supply for those in need.
+            Join us in saving lives by donating blood, volunteering, or organizing blood drives.
+        </p>
+        <img src="https://via.placeholder.com/600x400" alt="Blood Donation">
+    </div>
+
+</body>
+</html>
+<link rel="stylesheet" href="styles.css">
+<p>We are committed to ensuring a constant and reliable supply of blood for patients in need. 
+    Our blood bank serves hospitals and clinics, providing blood for surgeries, trauma care, and 
+    emergency situations.</p> 
+
+

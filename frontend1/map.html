@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Central Blood Bank Locations</title>
+  <style>
+    #map {
+      height: 500px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Our Blood Bank Locations</h1>
+  <p>Find the nearest blood bank to you:</p>
+  <div id="map"></div>
+
+  <script>
+    function initMap() {
+      // Array of blood bank locations with names
+      const locations = [
+        { name: "Central Blood Bank HQ", lat: 40.73061, lng: -73.935242 },
+        { name: "Downtown Branch", lat: 40.712776, lng: -74.005974 },
+        { name: "Eastside Branch", lat: 40.752726, lng: -73.977229 },
+        { name: "Northside Branch", lat: 40.785091, lng: -73.968285 },
+      ];
+
+      // Center of the map
+      const centerLocation = { lat: 40.73061, lng: -73.935242 };
+
+      // Create the map
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: centerLocation,
+      });
+
+      // Add markers for each location
+      locations.forEach((location) => {
+        const marker = new google.maps.Marker({
+          position: { lat: location.lat, lng: location.lng },
+          map: map,
+          title: location.name,
+        });
+
+        // Add an info window for each marker
+        const infoWindow = new google.maps.InfoWindow({
+          content: `<h3>${location.name}</h3><p>Coordinates: ${location.lat}, ${location.lng}</p>`,
+        });
+
+        // Show info window on marker click
+        marker.addListener("click", () => {
+          infoWindow.open(map, marker);
+        });
+      });
+    }
+  </script>
+
+  <!-- Replace "YOUR_API_KEY" with your actual Google Maps API key -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>
